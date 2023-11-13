@@ -25,11 +25,11 @@ namespace QueuesAndStacks.Classes
         }
 
         // Methods
-        public T? DeQueue()
+        public T DeQueue()
         {
             if (IsEmpty())
             {
-                return default;
+                throw new InvalidOperationException();
             }
             T item = _innerArray[_front];
             _front = (_front + 1) % Capacity;

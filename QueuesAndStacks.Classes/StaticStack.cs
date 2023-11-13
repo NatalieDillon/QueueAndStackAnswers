@@ -32,16 +32,16 @@ namespace QueuesAndStacks.Classes
             return _top == Capacity - 1;
         }
 
-        public T? Peek()
+        public T Peek()
         {
             if (!IsEmpty())
             {
                 return _innerArray[_top];
             }
-            return default;
+            throw new InvalidOperationException();
         }
 
-        public T? Pop()
+        public T Pop()
         {
             if (!IsEmpty())
             {
@@ -49,7 +49,7 @@ namespace QueuesAndStacks.Classes
                 _top -= 1;
                 return item;
             }
-            return default;
+            throw new InvalidOperationException();
         }
 
         public void Push(T item)

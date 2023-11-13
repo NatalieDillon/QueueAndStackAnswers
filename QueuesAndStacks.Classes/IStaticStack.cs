@@ -16,9 +16,9 @@ namespace QueuesAndStacks.Classes
 
         public bool IsFull(); // Returns true if the staick is full
 
-        public T? Pop(); // Removes and returns the top item from the stack
+        public T Pop(); // Removes and returns the top item from the stack
 
-        public T? Peek(); // Returns the top item from the stack but does not remove it
+        public T Peek(); // Returns the top item from the stack but does not remove it
 
         public void Push(T item); // Adds a new item to the top of the stack. Throws a StackOverFlowException if the stack is full.
 
