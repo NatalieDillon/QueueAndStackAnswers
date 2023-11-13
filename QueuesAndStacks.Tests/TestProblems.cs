@@ -36,5 +36,11 @@ namespace QueuesAndStacks.Tests
             Assert.AreEqual(expectedValue, stack.Display()); ;
         }
 
+        [TestMethod]
+        public void TestBinaryNumbers()
+        {
+            //
+        }
+
     }
 }

@@ -28,6 +28,13 @@ To do this pop the stack items and enqueue them</br>
 Then dequeue the queue items and push them to the stack</br>
 
 3: Generate binary numbers from 1 to any given number, “n”, using a queue</br>
+Return your result as a list of strings</br>
+To do this enqueue "1"</br>
+Then loop from 1 to n doing the following:</br> 
+Dequeue and add the dequeued value to your list</br>
+Append "0" to the dequeued value and then enqueue</br>
+Append "1" to the dequeued value and then enqueue</br>
+
 
 ### Extension
-Make your queue and stack classes dynamic. 
+Make your queue and stack classes dynamic.</br> 

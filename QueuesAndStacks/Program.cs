@@ -7,10 +7,11 @@ namespace QueuesAndStacks
     {
         static void Main()
         {
-            StringQueue();
             // NumberQueue();
             //StudentStack();
             //ReverseStack();
+            //StringQueue();
+            WriteBinary();
         }
 
         private static void StringQueue()
@@ -71,6 +72,12 @@ namespace QueuesAndStacks
             Console.WriteLine(stack.Display());
             Problems.ReverseStack(stack);
             Console.WriteLine(stack.Display());
+        }
+
+        private static void WriteBinary()
+        {
+            List<string> binaryValues = Problems.WriteBinary(100);
+            Console.WriteLine(string.Join(",", binaryValues));
         }
     }
 }

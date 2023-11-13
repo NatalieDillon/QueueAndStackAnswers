@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,21 @@ namespace QueuesAndStacks.Classes
             {
                 stack.Push(queue.DeQueue()); // Dequeue the queue items and push them on to the stack
             }
+        }
+
+        public static List<string> WriteBinary(int n)
+        {
+            List<string> result = new();
+            StaticQueue<string> queue = new(n+1);
+            queue.EnQueue("1");
+            for (int i = 1; i <= n; i++)
+            {
+                string value = queue.DeQueue();
+                result.Add(value);
+                queue.EnQueue(value + "0");
+                queue.EnQueue(value + "1");
+            }
+            return result;
         }
     }
 }
