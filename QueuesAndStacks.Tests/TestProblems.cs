@@ -39,7 +39,9 @@ namespace QueuesAndStacks.Tests
         [TestMethod]
         public void TestBinaryNumbers()
         {
-            //
+            List<string> expectedOutput = new() { "1", "10", "11", "100", "101", "110", "111", "1000", "1001", "1010" };
+            var output = Problems.WriteBinary(10);
+            CollectionAssert.AreEqual(expectedOutput, output);
         }
 
     }

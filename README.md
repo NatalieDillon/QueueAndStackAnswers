@@ -35,6 +35,7 @@ Dequeue and add the dequeued value to your list</br>
 Append "0" to the dequeued value and then enqueue</br>
 Append "1" to the dequeued value and then enqueue</br>
 
+Write tests for the above</br>
 
 ### Extension
 Make your queue and stack classes dynamic.</br> 
