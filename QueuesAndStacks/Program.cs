@@ -10,6 +10,7 @@ namespace QueuesAndStacks
             StringQueue();
             // NumberQueue();
             //StudentStack();
+            //ReverseStack();
         }
 
         private static void StringQueue()
@@ -57,6 +58,19 @@ namespace QueuesAndStacks
             Console.WriteLine(numbers.Size);
             Console.WriteLine(numbers.Display());
             //numbers.EnQueue(144);
+        }
+
+        private static void ReverseStack()
+        {
+            StaticStack<int> stack = new(5);
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
+            Console.WriteLine(stack.Display());
+            Problems.ReverseStack(stack);
+            Console.WriteLine(stack.Display());
         }
     }
 }

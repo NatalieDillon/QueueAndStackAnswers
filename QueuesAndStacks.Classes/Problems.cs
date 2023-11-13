@@ -30,19 +30,17 @@ namespace QueuesAndStacks.Classes
             return bracketStack.IsEmpty(); // At the end the stack should be empty if the brackets match
         }
 
-        public static List<T> ReverseStack<T>(StaticStack<T> stack)
+        public static void ReverseStack<T>(StaticStack<T> stack)
         {
-            List<T> result = new ();
             StaticQueue<T> queue = new StaticQueue<T>(stack.Capacity);
             while (!stack.IsEmpty())
             {
-                queue.EnQueue(stack.Pop());
+                queue.EnQueue(stack.Pop()); // Pop all stack items and enqueue them
             }
             while (!queue.IsEmpty())
             {
-                result.Add(queue.DeQueue());    
+                stack.Push(queue.DeQueue()); // Dequeue the queue items and push them on to the stack
             }
-            return result;
         }
     }
 }

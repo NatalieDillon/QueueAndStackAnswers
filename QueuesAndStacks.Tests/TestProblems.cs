@@ -23,5 +23,18 @@ namespace QueuesAndStacks.Tests
            Assert.AreEqual(expectedValue, result);
         }
 
+        [TestMethod]
+        public void TestReverseStack()
+        {
+            StaticStack<string> stack = new(4);
+            stack.Push("apples");
+            stack.Push("pears");
+            stack.Push("oranges");
+            stack.Push("mango");
+            Problems.ReverseStack(stack);
+            string expectedValue = "[apples, pears, oranges, mango]";
+            Assert.AreEqual(expectedValue, stack.Display()); ;
+        }
+
     }
 }

@@ -24,6 +24,8 @@ If the top of the stack is a ( you can pop it and move to the next symbol.</br>
 At the end of the expression there should be nothing left on the stack.</br> 
 
 2: Use a queue to reverse the output from a stack</br>
+To do this pop the stack items and enqueue them</br>
+Then dequeue the queue items and push them to the stack</br>
 
 3: Generate binary numbers from 1 to any given number, “n”, using a queue</br>
 
