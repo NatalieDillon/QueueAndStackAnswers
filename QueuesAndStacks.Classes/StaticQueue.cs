@@ -27,27 +27,55 @@ namespace QueuesAndStacks.Classes
         // Methods
         public T? DeQueue()
         {
-            throw new NotImplementedException();
+            if (IsEmpty())
+            {
+                return default;
+            }
+            T item = _innerArray[_front];
+            _front = (_front + 1) % Capacity;
+            Size--;
+            return item;
         }
 
         public string Display()
         {
-            throw new NotImplementedException();
+            if (IsEmpty())
+            {
+                return "[]";
+            }
+            int count = 0;
+            int index = _front;
+            StringBuilder sb = new();
+            sb.Append('[');
+            while (count < Size - 1)
+            {
+                sb.Append($"{_innerArray[index]}, ");
+                index = (index + 1) % Capacity;
+                count++;
+            }
+            sb.Append($"{_innerArray[index]}]");
+            return sb.ToString();
         }
 
         public void EnQueue(T item)
         {
-            throw new NotImplementedException();
+            if (IsFull())
+            {
+                throw new InvalidOperationException($"Queue is full");
+            }
+            _innerArray[_back] = item;
+            _back = (_back + 1) % Capacity;
+            Size++;
         }
 
         public bool IsEmpty()
         {
-            throw new NotImplementedException();
+            return Size == 0;
         }
 
         public bool IsFull()
         {
-            throw new NotImplementedException();
+            return Size == Capacity;
         }
     }
 }
