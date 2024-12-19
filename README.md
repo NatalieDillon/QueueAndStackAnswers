@@ -20,7 +20,8 @@ For every opening bracket there must be a closing bracket and brackets must open
 e.g. ( ( ) ) is valid.  ( ) ( ( ) ) is valid. ( ( ) ) ) ( is invalid.  </br> 
 You can solve by pushing the next symbol onto the stack if it is a (.  </br> 
 When a ) is reached, compare with the top of the stack by Peeking.  </br> 
-If the top of the stack is a ( you can pop it and move to the next symbol.</br> 
+If the top of the stack is a ( you can pop it and move to the next symbol. 
+If the stack is empty then you have a closing bracket with no opening bracket and need to throw an exception.</br> 
 At the end of the expression there should be nothing left on the stack.</br> 
 
 2: Use a queue to reverse the output from a stack</br>

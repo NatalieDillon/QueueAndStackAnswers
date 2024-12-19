@@ -7,16 +7,17 @@ namespace QueuesAndStacks
     {
         static void Main()
         {
-            // NumberQueue();
-            //StudentStack();
-            //ReverseStack();
-            //StringQueue();
-            WriteBinary();
+			// NumberQueue();
+			//StudentStack();
+			//StringQueue();
+			//ReverseStack();
+			//WriteBinary();
+            ValidateBracketedExpression();
         }
 
         private static void StringQueue()
         {
-            StaticQueue<string> colours = new StaticQueue<string>(10);
+            StaticQueue<string> colours = new (10);
             colours.EnQueue("red");
             colours.EnQueue("green");
             colours.EnQueue("yellow");
@@ -31,7 +32,7 @@ namespace QueuesAndStacks
             Console.WriteLine($"colours in queue: {colours.Display()}");
         }
 
-        public record Student(string Name, int age);
+        public record Student(string Name, int Age);
         private static void StudentStack()
         {
             Student studentA = new ("Bon Jovi", 64);
@@ -76,8 +77,17 @@ namespace QueuesAndStacks
 
         private static void WriteBinary()
         {
-            List<string> binaryValues = Problems.WriteBinary(100);
+            List<string> binaryValues = Problems.WriteBinary(32);
             Console.WriteLine(string.Join(",", binaryValues));
         }
+
+        public static void ValidateBracketedExpression()
+        {
+            string expr1 = "((5x7) + (11x3))/2";
+            Console.WriteLine($"Is {expr1} valid: {Problems.AreBracketsValid(expr1)}");
+
+			string expr2 = "((5x7) + (11x3)/2";
+			Console.WriteLine($"Is {expr2} valid: {Problems.AreBracketsValid(expr2)}");
+		}
     }
 }

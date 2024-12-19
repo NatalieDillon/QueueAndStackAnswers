@@ -33,7 +33,7 @@ namespace QueuesAndStacks.Classes
 
         public static void ReverseStack<T>(StaticStack<T> stack)
         {
-            StaticQueue<T> queue = new StaticQueue<T>(stack.Capacity);
+            StaticQueue<T> queue = new (stack.Capacity);
             while (!stack.IsEmpty())
             {
                 queue.EnQueue(stack.Pop()); // Pop all stack items and enqueue them
@@ -46,7 +46,7 @@ namespace QueuesAndStacks.Classes
 
         public static List<string> WriteBinary(int n)
         {
-            List<string> result = new();
+            List<string> result = [];
             StaticQueue<string> queue = new(n+1);
             queue.EnQueue("1");
             for (int i = 1; i <= n; i++)
